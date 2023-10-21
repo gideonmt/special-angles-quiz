@@ -1,29 +1,53 @@
+:root {
+    background: var(--background, #222);
+    --text: #ececec;
+    --highlight: #6577ff;
+}
+
 body {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--text);
+    font: 18px/1.6 Helvetica, Arial, sans-serif;
+}
+
+body#center {
     text-align: center;
 }
 
-body>div {
-    margin: 10px;
+h1,
+h2,
+h3 {
+    line-height: 1.4;
 }
 
+a,
+a:visited {
+    color: var(--highlight);
+}
+
+body>div {
+    margin: 10px 0;
+}
 
 #unitCircle {
     position: relative;
     width: 300px;
     height: 300px;
-    border: 2px solid #000;
+    border: 2px solid var(--text);
     border-radius: 50%;
     margin: 0 auto;
 }
 
-#center {
+#centerDot {
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: #000;
+    background-color: var(--text);
     border-radius: 50%;
     left: 145px;
     top: 145px;
+    z-index: 2;
 }
 
 #line {
@@ -36,6 +60,7 @@ body>div {
     transform-origin: 50% 0%;
     transform: rotate(0deg);
     transform-origin: 50% 100%;
+    z-index: 1;
 }
 
 #angleText {

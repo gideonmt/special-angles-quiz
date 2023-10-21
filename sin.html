@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body id="center">
     <div class="graph">
         <div id="unitCircle">
-            <div id="center"></div>
+            <div id="centerDot"></div>
             <div id="line"></div>
         </div>
     </div>
@@ -59,7 +59,7 @@
             if (userSinValue === correctSinValue) {
                 document.getElementById('resultText').textContent = 'Correct!';
             } else {
-                document.getElementById('resultText').textContent = `Incorrect. The correct answer is sin${currentAngle}=${correctSinValue}.`;
+                document.getElementById('resultText').textContent = `Incorrect. The correct answer is sin${currentAngle} = ${correctSinValue}.`;
             }
         }
 
